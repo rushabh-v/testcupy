@@ -13,7 +13,7 @@ jobs:
       run: which python
     - name: Run a multi-line script
       run: |
-        pip install pytest
+        pip3 install pytest
         git clone https://github.com/rushabh-v/cupy.git
         cd cupy
         git checkout ord-norm
