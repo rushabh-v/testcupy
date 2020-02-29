@@ -14,6 +14,9 @@ jobs:
     - name: Run a multi-line script
       run: |
         pip3 install pytest
+        chmod .pfnci/script.sh +x
+        ./.pfnci/script.sh
+        pip install -r requirements.txt
         git clone https://github.com/rushabh-v/cupy.git
         cd cupy
         git checkout ord-norm
