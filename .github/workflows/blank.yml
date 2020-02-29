@@ -10,12 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line script
-      run: which python
+      run: echo hello
     - name: Run a multi-line script
       run: |
         pip3 install pytest
-        chmod +x .pfnci/script.sh
-        ./.pfnci/script.sh
+        pip3 install numpy
         pip install -r requirements.txt
         git clone https://github.com/rushabh-v/cupy.git
         cd cupy
