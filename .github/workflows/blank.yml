@@ -15,7 +15,6 @@ jobs:
       run: |
         pip3 install pytest
         pip3 install numpy
-        pip install -r requirements.txt
         git clone https://github.com/rushabh-v/cupy.git
         cd cupy
         git checkout ord-norm
