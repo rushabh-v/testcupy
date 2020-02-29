@@ -13,8 +13,10 @@ jobs:
       run: echo Hello, world!
     - name: Run a multi-line script
       run: |
-        pip install cupy
+        pip install pytest
         git clone https://github.com/rushabh-v/cupy.git
+        cd cupy
         git checkout ord-norm
+        python -m pytest -v tests/cupy_tests/linalg_tests/test_norms.py
         
         
