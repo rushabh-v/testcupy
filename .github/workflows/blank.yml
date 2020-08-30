@@ -9,15 +9,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo hello
     - name: Run a multi-line script
       run: |
         pip3 install pytest
         pip3 install numpy
-        git clone https://github.com/rushabh-v/cupy.git
-        cd cupy
-        git checkout ord-norm
-        python3 -m pytest -v tests/cupy_tests/linalg_tests/test_norms.py
+        pip3 install tensorflow
+        pip3 install dill
+        pip3 install tensorflow-metadata
+        git clone https://github.com/rushabh-v/datasets
+        cd datasets
+        git checkout bair_large
+        python -m tensorflow_datasets.scripts.download_and_prepare \
+        --register_checksums \
+        --datasets=bair_robot_pushing128
+
         
         
