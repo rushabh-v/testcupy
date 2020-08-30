@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a multi-line script
+    - name: Test TFDS
       run: |
         pip3 install wheel
         sudo apt-get install python3-setuptools
