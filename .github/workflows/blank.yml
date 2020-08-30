@@ -11,10 +11,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run a multi-line script
       run: |
-        pip3 install typing typeguard>=2.7
         pip3 install wheel
         sudo apt-get install python3-setuptools
-        pip3 install pytest numpy setuptools tensorflow dill tensorflow-metadata
+        pip3 install pytest numpy setuptools typing typeguard>=2.7 tensorflow dill tensorflow-metadata
         git clone https://github.com/rushabh-v/datasets
         cd datasets
         git checkout bair_large
