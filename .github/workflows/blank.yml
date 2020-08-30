@@ -13,7 +13,7 @@ jobs:
       run: |
         pip3 install wheel
         sudo apt-get install python3-setuptools
-        pip3 install pytest numpy setuptools typing typeguard>=2.7 tensorflow==2.0.0b1 dill tensorflow-metadata
+        pip3 install pytest numpy setuptools typing typeguard>=2.7 tensorflow==2.0.0b1 dill tqdm tensorflow-metadata
         git clone https://github.com/rushabh-v/datasets
         cd datasets
         git checkout bair_large
