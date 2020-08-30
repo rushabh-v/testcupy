@@ -17,7 +17,7 @@ jobs:
         git clone https://github.com/rushabh-v/datasets
         cd datasets
         git checkout bair_large
-        python -m tensorflow_datasets.scripts.download_and_prepare \
+        python3 -m tensorflow_datasets.scripts.download_and_prepare \
         --register_checksums \
         --datasets=bair_robot_pushing128
 
