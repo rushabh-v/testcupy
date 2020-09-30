@@ -11,7 +11,7 @@ jobs:
     - name: Installaion
       run: |
         sudo apt update
-        sudo add-apt-repository ppa:rushabh-v/facerec
+        sudo add-apt-repository ppa:rushabh-v/facerec-ppa
         sudo apt install facerec
 
 
