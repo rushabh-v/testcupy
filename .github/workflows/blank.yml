@@ -12,6 +12,7 @@ jobs:
       run: |
         sudo apt update
         sudo add-apt-repository ppa:rushabh-v/facerec-ppa
+        sudo apt-get update
         sudo apt install facerec
 
 
