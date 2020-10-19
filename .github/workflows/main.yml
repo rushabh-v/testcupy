@@ -23,8 +23,7 @@ jobs:
       run: |
         python3 /lib/Auth/Facerec/getFaces.py
         python /lib/Auth/Facerec/pam_ptn.py
-    - name: Test facerec --help
-      run: facerec --help
-
-    - name: Test facerec --version
-      run: facerec --version
+    - name: Test facerec
+      run: |
+        facerec --help
+        facerec --version
