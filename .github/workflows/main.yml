@@ -19,10 +19,10 @@ jobs:
         cd ..
         sudo dpkg -i facerec_*.deb
         source ~/.bashrc
-    #- name: Check imports
-     # run: |
-      #  python3 /lib/Auth/Facerec/getFaces.py
-       # python /lib/Auth/Facerec/pam_ptn.py
+    - name: Check imports
+      run: |
+        sudo python3 /lib/Auth/Facerec/getFaces.py
+        sudo python /lib/Auth/Facerec/pam_ptn.py
     - name: Test ls
       run: |
         sudo ls /usr/lib/Auth/Facerec/
