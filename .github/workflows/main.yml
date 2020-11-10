@@ -21,8 +21,8 @@ jobs:
         source ~/.bashrc
     - name: Check imports
       run: |
-        sudo python3 /lib/Auth/Facerec/getFaces.py
-        sudo python /lib/Auth/Facerec/pam_ptn.py
+        sudo python3 /usr/lib/Auth/Facerec/getFaces.py
+        sudo python /usr/lib/Auth/Facerec/pam_ptn.py
     - name: Test ls
       run: |
         sudo ls /usr/lib/Auth/Facerec/
