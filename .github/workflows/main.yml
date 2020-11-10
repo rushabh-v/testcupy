@@ -25,7 +25,7 @@ jobs:
        # python /lib/Auth/Facerec/pam_ptn.py
     - name: Test ls
       run: |
-        ls /usr/lib/Auth/Facerec/
+        sudo ls /usr/lib/Auth/Facerec/
   
   #  - name: Test facerec
    #   run: |
