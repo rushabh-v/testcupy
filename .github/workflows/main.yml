@@ -12,18 +12,22 @@ jobs:
     - uses: actions/checkout@v1
     - name: Installaion
       run: |
-        git clone https://github.com/rushabh-v/linux_face_unlock
+        git clone https://github.com/pulkitvyas08/linux_face_unlock
         cd linux_face_unlock
         sudo apt-get install dh-make debhelper python3-pip python3-opencv python3-setuptools python-execnet cmake libatlas-base-dev build-essential
         dpkg-buildpackage -b
         cd ..
         sudo dpkg -i facerec_*.deb
         source ~/.bashrc
-    - name: Check imports
+    #- name: Check imports
+     # run: |
+      #  python3 /lib/Auth/Facerec/getFaces.py
+       # python /lib/Auth/Facerec/pam_ptn.py
+    - name: Test ls
       run: |
-        python3 /lib/Auth/Facerec/getFaces.py
-        python /lib/Auth/Facerec/pam_ptn.py
-    - name: Test facerec
-      run: |
-        facerec --help
-        facerec --version
+        ls /usr/lib/Auth/Facerec/
+  
+  #  - name: Test facerec
+   #   run: |
+    #    facerec --help
+     #   facerec --version
