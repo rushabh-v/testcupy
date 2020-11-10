@@ -27,7 +27,7 @@ jobs:
       run: |
         sudo ls /usr/lib/Auth/Facerec/
   
-  #  - name: Test facerec
-   #   run: |
-    #    facerec --help
+    - name: Test facerec
+      run: |
+        facerec --help
      #   facerec --version
